@@ -17,13 +17,13 @@ let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
     humanChoice == "rock" && computerChoice == "rock" ? alert("Tie!") :
-    humanChoice == "rock" && computerChoice == "paper" ? alert("Lose!") && ++computerScore && console.log(computerScore) :
-    humanChoice == "rock" && computerChoice == "scissors" ? alert ("Win!") && ++humanScore && console.log(humanScore) :
-    humanChoice == "paper" && computerChoice == "rock" ? alert("Win!") && ++humanScore && console.log(humanScore) :
+    humanChoice == "rock" && computerChoice == "paper" ? alert("Lose!") && ++computerScore :
+    humanChoice == "rock" && computerChoice == "scissors" ? alert ("Win!") && ++humanScore :
+    humanChoice == "paper" && computerChoice == "rock" ? alert("Win!") && ++humanScore :
     humanChoice == "paper" && computerChoice == "paper" ? alert("Tie!") :
-    humanChoice == "paper" && computerChoice == "scissors" ? alert ("Lose!") && ++computerScore && console.log(computerScore) :
-    humanChoice == "scissors" && computerChoice == "rock" ? alert("Tie!") && ++computerScore && console.log(computerScore) :
-    humanChoice == "scissors" && computerChoice == "paper" ? alert("Lose!") && ++humanScore && console.log(humanScore) :
+    humanChoice == "paper" && computerChoice == "scissors" ? alert ("Lose!") && ++computerScore :
+    humanChoice == "scissors" && computerChoice == "rock" ? alert("Tie!") && ++computerScore :
+    humanChoice == "scissors" && computerChoice == "paper" ? alert("Lose!") && ++humanScore :
     humanChoice == "scissors" && computerChoice == "scissors" ? alert ("Win!") :
     console.log("wtf happened to the code");
 }
