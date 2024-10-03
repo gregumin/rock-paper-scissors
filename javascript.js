@@ -36,7 +36,7 @@ console.log(humanChoice)
 
 playRound(humanChoice, computerChoice)
 
-console.log(humanScore)
-console.log(computerScore)
+console.log(`your score is ${humanScore}`);
+console.log(`the computer score is ${computerScore}`)
 
 
