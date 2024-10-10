@@ -1,3 +1,5 @@
+
+
 function playGame(){
 
 function getComputerChoice () {
@@ -13,8 +15,8 @@ function getHumanChoice() {
 }
 
 function updateChoice() {
-    preHumanChoice = getHumanChoice();
-    humanChoice = preHumanChoice.toLowerCase();
+    //preHumanChoice = getHumanChoice();
+    //humanChoice = preHumanChoice.toLowerCase();
     computerChoice = getComputerChoice();
 }
 
@@ -32,53 +34,46 @@ function playRound(humanChoice, computerChoice) {
     humanChoice == "scissors" && computerChoice == "paper" ? ++humanScore && alert("Win! S beats P ") :
     humanChoice == "scissors" && computerChoice == "scissors" ? alert ("Tie! Both S") :
     console.log("wtf happened to the code");
+
+    const yourChoice = document.querySelector("#yourChoice");
+    const compChoice = document.querySelector("#compChoice");
+    const yourScore = document.querySelector("#yourScore");
+    const compScore = document.querySelector("#compScore");
+
+    yourChoice.textContent = `you entered: ${humanChoice}`;
+    compChoice.textContent = `the computer entered: ${computerChoice}`;
+    yourScore.textContent = `your score is: ${humanScore}`;
+    compScore.textContent = `the computer score is: ${computerScore}`;
+
+    const winnerText = document.querySelector("#winnerText");
+
+    updateChoice();
+
+    if (computerScore === 5) {winnerText.textContent = `computer wins the whole game :(`};
+    if (humanScore === 5) {winnerText.textContent = `you win the whole game! :)`}
 }
 
 // below is the current core gameplay loop
 
-let preHumanChoice = getHumanChoice();
-let humanChoice = preHumanChoice.toLowerCase();
 let computerChoice = getComputerChoice();
 
-console.log(humanChoice)
-console.log(computerChoice)
+const btnRock = document.querySelector("#rock");
+const btnPaper = document.querySelector("#paper");
+const btnScissors = document.querySelector("#scissors");
 
-playRound(humanChoice, computerChoice)
+btnRock.onclick = () => playRound("rock",computerChoice);
+btnPaper.onclick = () => playRound("paper",computerChoice);
+btnScissors.onclick = () => playRound("scissors",computerChoice);
 
-console.log(`your score is ${humanScore}`);
-console.log(`the computer score is ${computerScore}`)
 
-updateChoice();
-console.log(humanChoice);
-console.log(computerChoice);
-playRound(humanChoice, computerChoice);
 
-console.log(`your score is ${humanScore}`);
-console.log(`the computer score is ${computerScore}`)
 
-updateChoice();
-console.log(humanChoice);
-console.log(computerChoice);
-playRound(humanChoice, computerChoice);
 
-console.log(`your score is ${humanScore}`);
-console.log(`the computer score is ${computerScore}`)
 
-updateChoice();
-console.log(humanChoice);
-console.log(computerChoice);
-playRound(humanChoice, computerChoice);
 
-console.log(`your score is ${humanScore}`);
-console.log(`the computer score is ${computerScore}`)
 
-updateChoice();
-console.log(humanChoice);
-console.log(computerChoice);
-playRound(humanChoice, computerChoice);
 
-console.log(`your score is ${humanScore}`);
-console.log(`the computer score is ${computerScore}`)
+
 
 }
 
