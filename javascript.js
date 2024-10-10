@@ -66,15 +66,6 @@ btnPaper.onclick = () => playRound("paper",computerChoice);
 btnScissors.onclick = () => playRound("scissors",computerChoice);
 
 
-
-
-
-
-
-
-
-
-
 }
 
 playGame()
